@@ -1,13 +1,14 @@
-# Turborepo starter
+# Mono Tools
 
-This Turborepo starter is maintained by the Turborepo core team.
+This template is for creating a monorepo with Turborepo, shadcn/ui, tailwindcss v4, and react v19.
 
-## Using this example
+## Usage
 
-Run the following command:
+in the root directory run:
 
-```sh
-npx create-turbo@latest
+```bash
+pnpm install
+pnpm dev
 ```
 
 ## What's inside?
@@ -18,7 +19,7 @@ This Turborepo includes the following packages/apps:
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/ui`: a shadcn/ui component library shared by both `web` and `docs` applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
@@ -32,12 +33,34 @@ This Turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
+## Addding Components
+
+To add components to your app, run the following command:
+
+```bash
+pnpm dlx shadcn@init add button -c apps/[*insert app file*]
+```
+
+This will place the ui components in the `packages/ui/src/components` directory.
+
+## Using components
+
+To use the components in your app, import them from the `ui` package.
+
+```tsx
+import { Button } from "@repo/ui/components/ui/button";
+```
+
+## Tailwind
+
+Your `globals.css` are already set up to use the components from the `ui` package which is imported into each app.
+
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd mono-tools
 pnpm build
 ```
 
@@ -46,7 +69,7 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd mono-tools
 pnpm dev
 ```
 
@@ -60,8 +83,8 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
 ```
-cd my-turborepo
-npx turbo login
+cd mono-tools
+pnpm dlx turbo login
 ```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
@@ -69,7 +92,7 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
 
 ```
-npx turbo link
+pnpm dlx turbo link
 ```
 
 ## Useful Links
@@ -82,5 +105,3 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
-
-xx
