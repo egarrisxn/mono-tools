@@ -105,3 +105,9 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## More Resources
+
+- [shadcn/ui - Monorepo](https://ui.shadcn.com/docs/monorepo)
+- [Turborepo - shadcn/ui](https://turbo.build/repo/docs/guides/tools/shadcn-ui)
+- [TailwindCSS v4 - Explicitly Registering Sources](https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources)

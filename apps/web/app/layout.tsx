@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Providers } from "@/components/providers";
-// import "@repo/ui/styles.css";
+import { Toaster as SonnerToaster } from "sonner";
+import { ThemeProvider } from "@/components/providers";
+import Navbar from "@/components/navbar";
 import "./globals.css";
 
 const fontSans = Geist({
@@ -27,7 +28,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} ${fontMono.variable}`}>
-        <Providers>{children}</Providers>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          enableColorScheme
+          disableTransitionOnChange
+        >
+          <main>
+            <Navbar />
+            {children}
+            <SonnerToaster richColors closeButton position="bottom-right" />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

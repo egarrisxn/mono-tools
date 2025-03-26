@@ -1,5 +1,5 @@
 import { ModeToggle } from "@/components/mode-toggle";
-import { Button, buttonVariants } from "@repo/ui/components/button";
+import { Button, buttonVariants } from "@repo/ui/src/components/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -9,8 +9,8 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@repo/ui/components/dropdown-menu";
-import { cn } from "@repo/ui/lib/utils";
+} from "@repo/ui/src/components/dropdown-menu";
+import { cn } from "@repo/ui/src/lib/utils";
 import { ChevronDownIcon } from "lucide-react";
 import Image from "next/image";
 
