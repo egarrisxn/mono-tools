@@ -1,13 +1,17 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@repo/eslint",
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "license": "MIT",
   "exports": {
     "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
+    "./next": "./next.js",
+    "./react": "./react.js"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "update": "pnpm update --latest",
+    "clean": "rm -rf node_modules/ .turbo/"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",

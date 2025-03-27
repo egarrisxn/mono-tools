@@ -1,6 +1,6 @@
-import { DateDisplay } from "@repo/ui/src/components/date-display";
-import { TimeDisplay } from "@repo/ui/src/components/time-display";
-import ThemeToggle from "./theme-toggle";
+import { DateDisplay } from "@repo/ui/components/date-display";
+import { TimeDisplay } from "@repo/ui/components/time-display";
+import { ThemeToggle } from "@repo/ui/components/theme-toggle";
 
 export default function Navbar() {
   return (

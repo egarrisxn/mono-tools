@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeToggle } from "@repo/ui/components/theme-toggle";
 import { Button, buttonVariants } from "@repo/ui/components/button";
 import {
   DropdownMenu,
@@ -46,7 +46,7 @@ export default function DocsPage() {
 import { cn } from '@repo/ui/lib/utils';`}</code>
         </pre>
 
-        <ModeToggle />
+        <ThemeToggle />
 
         <Button size={"sm"}>Click me</Button>
 

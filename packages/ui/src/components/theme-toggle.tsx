@@ -8,10 +8,10 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from "@repo/ui/src/components/dropdown-menu";
-import { Button } from "@repo/ui/src/components/button";
+} from "@repo/ui/components/dropdown-menu";
+import { Button } from "@repo/ui/components/button";
 
-export default function ThemeSelector() {
+export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
 
   return (

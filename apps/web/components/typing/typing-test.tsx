@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Button } from "@repo/ui/src/components/button";
-import { cn } from "@repo/ui/src/lib/utils";
+import { Button } from "@repo/ui/components/button";
+import { cn } from "@repo/ui/lib/utils";
 
 export default function Typing({ quotes }: { quotes: string[] }) {
   const [currentQuote, setCurrentQuote] = useState("");

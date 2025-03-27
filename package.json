@@ -2,14 +2,14 @@
   "name": "mono-tools",
   "version": "1.0.0",
   "private": true,
-  "license": "MIT",
   "scripts": {
-    "build": "turbo run build",
     "dev": "turbo run dev",
+    "build": "turbo run build",
     "lint": "turbo run lint",
-    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,md}\"",
-    "format:fix": "prettier --write \"**/*.{js.,jsx,ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "format": "turbo run format",
+    "check-types": "turbo run check-types",
+    "update": "turbo run update",
+    "clean": "turbo run clean && rm -rf .turbo/ node_modules"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
@@ -20,5 +20,16 @@
   "packageManager": "pnpm@10.7.0",
   "engines": {
     "node": ">=20"
+  },
+  "prettier": {
+    "semi": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   }
 }
